@@ -5,7 +5,7 @@ function BuryOldEmail() {
   for (var i = 0; i < threads.length; i++) {
 
     if(((new Date) - threads[i].getLastMessageDate()) > ONE_WEEK) {
-      threads[i].markRead();
+      threads[i].moveToArchive();
     }
 
   }
